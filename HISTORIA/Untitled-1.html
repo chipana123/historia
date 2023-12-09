@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>historia</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <nav>
+    <div class="logo"></div>
+    <a class="btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <div class="menu">
+      <a href="#ini">Inicio</a>
+      <a href="#cin">Cine</a>
+      <a href="#str">Streaming</a>
+      <a href="#nos">Sobre nosotros</a>
+      <button class="login-btn">Ingresar</button>
+      <button class="register-btn">Registrarse</button>
+    </div>
+    <!-- Formulario emergente de login -->
+    <div class="overlay" id="loginOverlay">
+      <div class="popup">
+        <h2>Ingresar</h2>
+        <form id="loginForm">
+          <label for="username">Nombre de usuario:</label>
+          <input type="text" id="username" name="username" required>
+
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password" required>
+
+          <div class="btn-container">
+            <button type="button" onclick="submitForm()">Ingresar</button>
+            <button type="button" onclick="clearForm()">Limpiar formulario</button>
+          </div>
+        </form>
+        <a class="close" onclick="closeForm('Ingresar')">×</a>
+      </div>
+    </div>
+    <!-- Formulario emergente de registro -->
+    <div class="overlay" id="registerOverlay">
+      <div class="popup">
+        <h2>Registrarse</h2>
+        <form id="registerForm">
+          <label for="firstName">Nombre:</label>
+          <input type="text" id="firstName" name="firstName" required>
+
+          <label for="lastName">Apellidos:</label>
+          <input type="text" id="lastName" name="lastName" required>
+
+          <label for="age">Edad:</label>
+          <input type="text" id="age" name="age" required>
+
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="registerPassword">Contraseña:</label>
+          <input type="password" id="registerPassword" name="registerPassword" required>
+
+          <div class="btn-container">
+            <button type="button" onclick="registerUser()">Registrarse</button>
+            <button type="button" onclick="clearRegisterForm()">Limpiar formulario</button>
+          </div>
+        </form>
+        <a class="close" onclick="closeForm('Registrarse')">×</a>
+      </div>
+    </div>
+  </nav>
+  <header></header>
+  <article>
+    <h1>HISTRORIA DE LA GUERRA ENTRE ISRAEL Y PALESTINA</h1>
+    <a id="ini"></a>
+    <h2>Inicio</h2>
+    <p>
+      ¡Te doy la bienvenida a Cinemateca Bolivia, un espacio único donde la
+      magia del séptimo arte se fusiona con la riqueza cultural de Bolivia. En
+      este fascinante rincón cinematográfico, podrás sumergirte en la
+      experiencia de disfrutar películas y series que no solo entretienen,
+      sino que también te transportan a mundos diversos y te permiten explorar
+      la creatividad humana en su máxima expresión.
+      <br />
+      <br />
+      La Cinemateca Bolivia no es solo un lugar para el entretenimiento, sino
+      también un faro de conocimiento sobre la vibrante cultura boliviana. A
+      través de proyecciones, eventos y actividades educativas, ofrecemos una
+      ventana única para aprender sobre la historia, las tradiciones y la
+      diversidad que caracterizan a este hermoso país.
+      <br />
+      <br />
+      Nuestra selección de películas y series abarca desde joyas del cine
+      boliviano hasta éxitos internacionales, proporcionando un abanico
+      variado de opciones para todos los gustos y edades. Además, aprovechamos
+      la tecnología y la conectividad para mantenerte actualizado sobre las
+      últimas tendencias en el mundo del cine y la cultura.
+    </p>
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <img src="img/img1.jpg" alt="Imagen 1" />
+      </div>
+      <div class="gallery-item">
+        <img src="img/img2.jpg" alt="Imagen 2" />
+      </div>
+      <div class="gallery-item">
+        <img src="img/img3.jpg" alt="Imagen 3" />
+      </div>
+    </div>
+  </article>
+  <article>
+    <a id="cin"></a>
+    <h2>Cine</h2>
+    <p>
+      Estas son las peliculas que se estan presentando ahora mismo en el cine:
+    </p>
+    <div class="gallery-container-cine">
+      <!-- Columna 1: Posters de películas -->
+      <div class="poster-column">
+        <div class="poster-item">
+          <img src="img/poster1.jpg" alt="Película 1" />
+        </div>
+        <div class="poster-item">
+          <img src="img/poster2.jpg" alt="Película 2" />
+        </div>
+        <div class="poster-item">
+          <img src="img/poster3.jpg" alt="Película 3" />
+        </div>
+        <div class="poster-item">
+          <img src="img/poster4.jpg" alt="Película 3" />
+        </div>
+        <div class="poster-item">
+          <img src="img/poster5.jpg" alt="Película 3" />
+        </div>
+        <div class="poster-item">
+          <img src="img/poster6.jpg" alt="Película 3" />
+        </div>
+        <div class="poster-item">
+          <img src="img/poster7.jpg" alt="Película 3" />
+        </div>
+        <div class="poster-item">
+          <img src="img/poster8.jpg" alt="Película 3" />
+        </div>
+        <!-- Agrega más posters según sea necesario -->
+      </div>
+
+      <!-- Columna 2: Trailers de YouTube y Descripciones -->
+      <div class="trailer-column">
+        <div class="trailer-item">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ksR3AzoEiXE" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <p class="trailer-description">Esta película basada en hechos reales cuenta la historia de una lejana
+            comunidad Quechua, en la que un equipo del Cuerpo de Paz estadounidense se dedica a esterilizar a mujeres
+            indígenas sin su consentimiento. Ignacio, jefe de la Comunidad, descubre el crimen y toma represalias junto
+            a los comuneros.</p>
+        </div>
+        <div class="trailer-item">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mQZtBf8C5D4" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <p class="trailer-description">Don ‘Vito’ es camionero originario de la zona occidental (un Colla) en cambio,
+            ‘Brillo’ es un lustra botas nacido en el Oriente (un Camba). Brillo está obstinado en viajar y Don Vito ante
+            tal empeño, decide llevarle a La Paz como ayudante. La antipatía de uno hacia el otro, es el eje de la rueda
+            que constituye el guión y que recorre los viejos cumbres y culturas del país.</p>
+        </div>
+        <div class="trailer-item">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9BQMJ8gw24g" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <p class="trailer-description">En el altiplano boliviano, una pareja de ancianos quechuas lleva años viviendo
+            la misma vida cotidiana. Durante una sequía inusualmente larga, Virginio y su esposa Sisa se enfrentan a un
+            dilema: resistir o ser derrotados por el entorno y el propio tiempo.</p>
+        </div>
+        <div class="trailer-item">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/F_qyLPMwVwY" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <p class="trailer-description">Paloma y Amaru tienen una relación casi perfecta — hasta que aparece Søren.
+            Místico, embustero o quizás solo un simple aventurero europeo, Søren tiene una profunda influencia en la
+            vida de la joven pareja, infectándolos de cuestionamientos y empujándolos a una búsqueda existencial.</p>
+        </div>
+        <div class="trailer-item">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OLglcUOp9Bw" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <p class="trailer-description">“Wiñay” es la historia de Susana y Sole, dos mujeres con diferencias visibles
+            que inician un viaje a la selva para participar de un ritual de Ayahuasca. El filme es un viaje interior
+            sobre la amistad y el olvido.</p>
+        </div>
+        <div class="trailer-item">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ORMqX77OQ8c" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <p class="trailer-description">Este drama histórico sobre la guerra del Chaco no representa la lucha
+            sangrienta, sino la historia de un pequeño regimiento boliviano que vaga por la inhóspita y seca llanura
+            chaqueña en 1934.</p>
+        </div>
+        <div class="trailer-item">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/4ozJsugKJHY" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <p class="trailer-description">Después de que su madre lo expulsa de su casa, Sebastián, un chico de 15 años,
+            viaja a Guayaramerín, un pueblo en la frontera entre Bolivia y Brasil. Allí conoce a su padre y a la novia
+            de éste, Julieta, de quien se enamora.</p>
+        </div>
+        <div class="trailer-item">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NvV6CI5RCW8" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <p class="trailer-description">Juvenal un hombre de treinta y tres años, alcohólico desde sus catorce años,
+            decide ir a pasar sus últimos días de vida, en el “Cementerio de los Elefantes, un local que es preferido
+            por epedernidos alcohólicos de la ciudad de La Paz.</p>
+        </div>
+        <!-- Agrega más trailers y descripciones según sea necesario -->
+      </div>
+    </div>
+  </article>
+  <article>
+    <a id="str"></a>
+    <h2>Streaming</h2>
+    <p>
+      También tenemos una amplia variedad de peliculas que son transmitidas con la suscripción mensual,
+      algunas de ellas son las siguientes:
+    </p>
+    <div class="movie-gallery">
+      <div class="movie-item">
+        <img src="img/str1.jpg" alt="Poster 1" />
+      </div>
+      <div class="movie-item">
+        <img src="img/str2.jpg" alt="Poster 2" />
+      </div>
+      <div class="movie-item">
+        <img src="img/str3.jpg" alt="Poster 3" />
+      </div>
+      <div class="movie-item">
+        <img src="img/str4.jpg" alt="Poster 4" />
+      </div>
+      <div class="movie-item">
+        <img src="img/str5.jpg" alt="Poster 5" />
+      </div>
+      <div class="movie-item">
+        <img src="img/str6.jpg" alt="Poster 6" />
+      </div>
+      <div class="movie-item">
+        <img src="img/str7.jpg" alt="Poster 7" />
+      </div>
+      <div class="movie-item">
+        <img src="img/str8.jpg" alt="Poster 8" />
+      </div>
+      <div class="movie-item">
+        <img src="img/str9.jpg" alt="Poster 9" />
+      </div>
+      <div class="movie-item">
+        <img src="img/str10.jpg" alt="Poster 10" />
+      </div>
+      <div class="movie-item">
+        <img src="img/str11.jpg" alt="Poster 11" />
+      </div>
+      <div class="movie-item">
+        <img src="img/str12.jpg" alt="Poster 12" />
+      </div>
+      <!-- Agrega más elementos según sea necesario -->
+
+    </div>
+  </article>
+  <article>
+    <a id="nos"></a>
+    <h2>Sobre nosotros</h2>
+    <p>
+      En el momento de su fundación como institución (12 de julio de 1976), se vivían los años de la dictadura de
+      Hugo
+      Banzer, no existía ningún repositorio para las imágenes en movimiento, y estas estaban desperdigadas en
+      depósitos
+      descuidados en Canal 7 (en habitaciones llenas de humedad o inundadas, material tirado en el suelo, películas
+      del
+      ICB sin protección alguna o en latas completamente ensarradas, montones de película reversible de noticieros
+      en
+      cajas de cartón o turriles en las viejas instalaciones del Canal en El Alto, varias cintas de vídeo de dos
+      pulgadas en rincones acumulando polvo, etc.) y en manos de privados. Además, buena parte del material
+      boliviano
+      producido en la época o en plena producción, podía ser cuestionado, censurado o prohibido por el gobierno,
+      como de
+      hecho ocurrió en más de un caso. Realizadores importantes estaban entonces en el exilio y el Estado no tenía,
+      en
+      ese contexto ideológico, la disposición de encarar un desafío de esta naturaleza. Sobre todo teniendo en
+      cuenta
+      varios antecedentes, como fue el caso de los materiales producidos por el Instituto Cinematográfico Boliviano
+      en
+      la década de los cincuenta, que constituían un riquísimo registro de la Bolivia post Revolución del 52, pero
+      que
+      fueron olvidados, desprotegidos e incluso mutilados por desidia o manipulación política, después de 1964.
+      <br>
+      <br>
+      Para desarrollar esta importante actividad cuyo corazón, hay que subrayarlo, fue, es y deberá ser, el Archivo
+      Nacional de Imágenes en Movimiento, se le dio a la Fundación un inequívoco soporte jurídico desde el Estado.
+      El
+      proceso para que eso ocurriera se desarrolló así:
+      <br>
+      <br>
+      El 12 de julio de 1976 se crea la Fundación Cinemateca de La Paz, con la participación de la H.A.M. de La Paz,
+      el
+      Cine 16 de Julio-Obra Don Bosco y el Centro de Orientación Cinematográfica. La Fundación (con sus estatutos
+      detallados) obtiene su personería jurídica el 29 de septiembre de 1977.
+      <br>
+      <br>
+      En septiembre de 1977 cambia su nombre de Fundación Cinemateca de La Paz pasa a llamarse Fundación Cinemateca
+      Boliviana.
+      <br>
+      <br>
+      La Cinemateca es reconocida oficialmente por el Estado como Archivo Nacional de Imágenes en Movimiento a
+      través
+      del Decreto Ley Nº 15604 de 27 de junio de 1978.
+      <br>
+      <br>
+      Esta condición es ratificada de modo detallado a través del Decreto Supremo Nº 16762 de 11 de julio de 1979.
+      <br>
+      <br>
+      El instrumento legal más importante de todos los que respaldan a la Fundación, en actual vigencia, es la Ley
+      Nº
+      1302 promulgada el 20 de diciembre de 1991. El 20 de julio de 1992 se adecuan los estatutos a las
+      características
+      de la Ley 1302 y se oficializa legalmente el nuevo nombre: Fundación Cinemateca Boliviana.
+      <br>
+      <br>
+      El 1° de julio de 1996 se aprueban nuevos estatutos, refrendados por la Prefectura de La Paz el 9 de abril de
+      1997. A partir de esta nueva estructura se crea un Consejo de Fideicomisarios, un Directorio y una Dirección
+      Ejecutiva. Además, el Director Ejecutivo del Conacine, a nombre del Estado, ocupa un puesto permanente en el
+      directorio de la Fundación. Salvo la Dirección Ejecutiva, todos los cargos son ad honorem.
+      <br>
+      <br>
+      Es fundamental subrayar que fue la Cinemateca la institución que promovió, trabajó en la redacción y
+      aprobación de
+      la Ley de Cine vigente y luchó por su promulgación. Sin su iniciativa esa Ley y los elementos de fomento y
+      preservación de nuestra cinematografía hubiesen tardado mucho más en hacerse realidad.
+      <br>
+      <br>
+      Tuvo también papel protagónico en la redacción y aprobación de las Leyes de Derechos de Autor y de Depósito
+      Legal.
+    </p>
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <img src="img/nos1.jpg" alt="Imagen 1" />
+      </div>
+      <div class="gallery-item">
+        <img src="img/nos2.jpg" alt="Imagen 2" />
+      </div>
+      <div class="gallery-item">
+        <img src="img/nos3.jpg" alt="Imagen 2" />
+      </div>
+    </div>
+  </article>
+  <script src="script.js"></script>
+  <footer>
+    <div class="footer-content">
+      <div class="contact-info">
+        <h3>Contacto</h3>
+        <p>Email: cinemateca@gmail.com</p>
+        <p>Teléfono: (2) 244 40 90</p>
+        <p>Dirección: Rosendo Gutierrez Rosendo Gutierrez esq. Oscar Soria, La Paz</p>
+      </div>
+      <div class="social-media">
+        <h3>Síguenos</h3>
+        <a href="#" target="_blank"><img src="img/wsp.png" alt="WhatsApp"></a>
+        <a href="#" target="_blank"><img src="img/inst.png" alt="Instagram"></a>
+        <a href="#" target="_blank"><img src="img/meta.png" alt="Facebook"></a>
+        <!-- Agrega más iconos según sea necesario -->
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Tu Sitio Web | Diseñado por <a href="#" target="_blank">Daniel Castro Velez</a></p>
+    </div>
+  </footer>
+<div style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;"><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website&utm_content=footer_img"><img src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com"></a></div><script>function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o<n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&&(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&¬ification.length>0&&null!=mainContent && new Date().toISOString().slice(0, 10) > '2023-10-29' && new Date().toISOString().slice(0, 10) < '2023-11-27'){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 0.3;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; display: flex; justify-content: center; width: 100%; }} .web-hosting-90-off-image {max-width: 90%;} .content-wrapper {min-height: 454px; display: flex; flex-direction: column; justify-content: center; z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); max-width: 350px; border: 0; border-radius: 3px; background-color: #ff4546 !important; padding: 15px 55px !important; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&utm_medium=panel&utm_campaign=000-wp"),link.innerHTML='<button class="upgrade_button_red_sale">Claim deal</button>',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background-color: #040713; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-left-color: #040713;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="The Biggest Ever <span style='color: #FF5C62;'>Black Friday</span> Sale<div style='font-size: 16px;line-height: 24px;font-weight: 400;margin-top: 12px;'><div style='display: flex;justify-content: flex-start;align-items: center;'><img src='https://www.000webhost.com/static/default.000webhost.com/images/generic/green-check-mark.png' alt='' style='margin-right: 10px; width: 20px;'>Managed WordPress Hosting</div><div style='display: flex;justify-content: flex-start;align-items: center;'><img src='https://www.000webhost.com/static/default.000webhost.com/images/generic/green-check-mark.png' alt='' style='margin-right: 10px; width: 20px;'>WordPress Acceleration</div><div style='display: flex;justify-content: flex-start;align-items: center;'><img src='https://www.000webhost.com/static/default.000webhost.com/images/generic/green-check-mark.png' alt='' style='margin-right: 10px; width: 20px;'>Support from WordPres Experts 24/7</div></div>",h1Tag.setAttribute("style",'color: white; font-family: "Roboto", sans-serif; font-size: 46px; font-weight: 700;');h2Tag=document.createElement("H2");h2Tag.innerHTML="<span style='font-size: 20px'>$</span>2.49<span style='font-size: 20px'>/mo</span>",h2Tag.setAttribute("style",'color: white; margin: 10px 0 0 0; font-family: "Roboto", sans-serif; font-size: 60px; font-weight: 700; line-height: 1;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="<span style='text-decoration:line-through; font-size: 14px; color:#727586'>$11.99.mo</span><br>+ 2 Months Free",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 20px; font-weight: 700; margin: 0 0 15px; 0');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='<div class="content-wrapper">'+mainContent.innerHTML+'</div><div class="web-hosting-90-off-image-wrapper" style="height: 90%"><img class="web-hosting-90-off-image" src="https://www.000webhost.com/static/default.000webhost.com/images/sales/bf2023/hero.png"></div>';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}else if(null!=wordpressAdminBody&¬ification.length>0&&null!=mainContent){var bulletPoints = mainContent.getElementsByTagName('li');var replacement=['Increased performance (up to 5x faster) - Thanks to Hostinger’s WordPress Acceleration and Caching solutions','WordPress AI tools - Creating a new website has never been easier','Weekly or daily backups - Your data will always be safe','Fast and dedicated 24/7 support - Ready to help you','Migration of your current WordPress sites to Hostinger is automatic and free!','Try Premium Web Hosting now - starting from $1.99/mo'];for (var i=0;i<bulletPoints.length;i++){bulletPoints[i].innerHTML = replacement[i];}}</script></body>
+
+</html>
