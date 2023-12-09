@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+     font-family: 'Roboto', sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #e6da77;
+     h1 {
+            font-size: 2em;
+            color: #1a0dab;
+        }
+
+        @keyframes marqueeAnimation {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        marquee {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: marqueeAnimation 15s linear infinite;
+        }
+}
+ .menu {
+     position: absolute;
+     right: 50px;
+ }
+ .menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #1a0dab;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #f1f1f1;
+}
+
+ 
+ .header {
+     background-color: #333;
+     color: #fff;
+     text-align: center;
+     padding: 20px;
+ }
+ 
+ #gallery {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+     gap: 20px;
+     padding: 20px;
+ }
+ 
+ .image {
+     position: relative;
+     overflow: hidden;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease-in-out;
+ }
+ 
+ .image:hover {
+     transform: scale(1.05);
+ }
+ 
+ .image img {
+     width: 100%;
+     height: auto;
+     display: block;
+     border-radius: 10px;
+ }
+         
+         h2, h3, h4, h5 {
+             color: #f12a10;
+         }
+ 
+         p{
+             color: #02080f;
+         }
+ 
+         .gallery-item img {
+             width: 100%;
+             height: auto;
+         }
+         footer {
+     background-color: #49c3f3;
+     color: #ccc;
+     padding: 20px;
+     text-align: center;
+ }
+ 
+ .footer-content {
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+ }
+ 
+ .contact-info,
+ .social-media {
+     margin-bottom: 20px;
+     flex: 1;
+ }
+ 
+ .contact-info h3,
+ .social-media h3 {
+     color: #eb0c87;
+     /* Morado como acento */
+ }
+ 
+ .contact-info p {
+     margin: 5px 0;
+ }
+ 
+ .social-media a {
+     display: inline-block;
+     margin: 0 10px;
+ }
+ 
+ .social-media img {
+     width: 40px;
+     height: auto;
+     
+     /* Convierte las imÃ¡genes a escala de grises */
+ }
+ 
+ .footer-bottom p {
+     font-size: 14px;
+ }
+ 
+ .footer-bottom a {
+     color: #4a68d5;
+     /* Morado como acento */
+     text-decoration: none;
+ }
+ 
+ .footer-bottom a:hover {
+     text-decoration: underline;
+ }
+ 
+ @media screen and (max-width: 768px) {
+     .footer-content {
+         flex-direction: column;
+     }
+ }
+ 
+ /* Estilos adicionales para los botones de login y registro */
+ .login-btn,
+ .register-btn {
+     background-color: #7d0c81;
+     /* Puedes ajustar el color segÃºn tu diseÃ±o */
+     color: #fff;
+     padding: 10px;
+     border: none;
+     cursor: pointer;
+ }
+ 
+ .login-btn:hover,
+ .register-btn:hover {
+     background-color: #3a823a;
+     /* Puedes ajustar el color de hover segÃºn tu diseÃ±o */
+ }
+ 
+ /* Agrega estilos para el formulario emergente */
+ .overlay {
+     display: none;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.7);
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .popup {
+     background: #80bff0;
+     padding: 20px;
+     border-radius: 5px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+     max-width: 400px;
+     width: 100%;
+     text-align: center;
+     border-color: aliceblue;
+     border-width: 5px;
+ }
+ 
+ .popup h2 {
+     color: rgb(229, 244, 255);
+ }
+ 
+ .popup label {
+     display: block;
+     margin: 10px 0 5px;
+ }
+ 
+ .popup input {
+     width: 100%;
+     padding: 8px;
+     margin-bottom: 10px;
+     box-sizing: border-box;
+ }
+ 
+ .btn-container {
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ .popup button {
+     background-color: #5d87ab;
+     color: #000000;
+     padding: 10px;
+     border: none;
+     cursor: pointer;
+     width: 48%;
+ }
+ 
+ .popup button:hover {
+     background-color: #5a2abb;
+     color: #cccccc;
+ }
+ 
+ .popup .close {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     font-size: 20px;
+     color: #209bb4;
+     text-decoration: none;
+     cursor: pointer;
+     }
+ 
+     </style>
+    <title>Document</title>
+</head>
+<body>
+    <marquee><h1>HISTORIAS DE LA GUERRA ENTRE ISRAEL Y PALESTINA</h1></marquee>
+        <div class="menu">
+          <a href="#ini">Inicio</a>
+          <a href="#dere">derechos humanos</a>
+          <a href="#his">la historia</a>
+          <a href="#cont">contactos</a>
+        </div>
+        <a id="ini"></a>
+    <h2>Inicio</h2>
+    <div class="gallery-item">
+        <img src="img1.jpg" alt="Imagen 1" />
+      </div>
+    <p>
+    El caso de Israel encierra una triste paradoja. Por un lado, el Estado de Israel existe porque una resolución de Naciones Unidas le concede el derecho de existir. Es el primer Estado moderno creado de esta manera. Por el otro, el Estado de Israel no deja de vulnerar sistemáticamente todas y cada una
+     de las resoluciones de esa misma organización que le dio la vida y que le reconoció la legitimidad de su existencia.
+    Israel representa a un pueblo que sufrió en sus carnes unos crímenes atroces. Años después es responsable de vulneraciones constantes del derecho internacional y de un sometimiento, represión y opresión constitutivos
+    de crímenes de guerra contra otro pueblo marginado y repudiado: el palestino.</p>
+
+    <a id="dere"></a>
+    <marquee><h2>RECURSOS DE DERECHOS HUMANOS</h2></marquee>
+    <h3>¿Qué son los derechos humanos?</h3>
+    <p>Los derechos humanos son universales, indivisibles e interdependientes. Engloban derechos y obligaciones inherentes a todos los seres humanos que nadie, ni el más poderoso de los Gobiernos, tiene autoridad para negarnos. No hacen distinción de sexo, nacionalidad, lugar de residencia, origen nacional o étnico, color, religión, lengua, edad, partido político
+     o condición social, cultural o económica.</p>
+
+     <h4>Declaración Universal de los Derechos Humanos</h4>
+     <p>La Declaración Universal de los Derechos Humanos (DUDH) fue proclamada por la Asamblea General de las Naciones Unidas en París en 1948, tras el tremendo impacto de la Segunda Guerra Mundial. Los 30 artículos constituyen el marco de referencia al que deberían ajustarse las leyes y la acción política en todos los países. A pesar de que los Estados y la comunidad internacional deben garantizar la protección de estos derechos universales, en muchos lugares del mundo se vulneran todos los días en la calle, en los hogares, en las cárceles, en los campos de personas refugiadas,
+        en las fábricas o en Internet, entre otras posibilidades.</p>
+
+        <h5>LUCHA POR LOS DERECHOS HUMANOS</h5>
+        <div id="gallery">
+            <div class="image"><img src="imag1.jpg" alt="Imagen 1"></div>
+            <div class="image"><img src="imag2.jpg" alt="Imagen 2"></div>
+            <div class="image"><img src="image3.jpg" alt="Imagen 3"></div>
+        </div>
+        <a id="his"></a>
+        <h2>La historia</h2>
+        <h3>La creación del Estado de Israel y el problema demográfico</h3>
+        <div id="gallery">
+            <div class="image"><img src="cat1.jpg"alt="Imagen 1"></div>
+        </div>
+        <P>El sionismo es un movimiento nacionalista que persigue la creación de un Estado judío y democrático en la Tierra Prometida del judaísmo, localizada en la Palestina histórica. Movidos por razones económicas, nacional-religiosas y humanitarias, los judíos comenzaron a emigrar hacia esta Tierra Prometida en 1881. La primera oleada judía a gran escala tuvo lugar en la década de 1930, en pleno Mandato Británico, como consecuencia de la persecución nazi.
+         Con el paso de los años, las comunidades judías asentadas en la Palestina histórica fueron creciendo y, con ello, aumentaron los enfrentamientos entre los palestinos que reivindicaban la independencia y los judíos que consideraban ese territorio como propio. Ante este panorama, el Reino Unido acudió a Naciones Unidas en 1947,
+        que emitió la Resolución 181 (II).</P>
+
+        <h3>Las Guerras de 1948 y 1967</h3>
+        <div id="gallery">
+            <div class="image"><img src="cat2.jpg" alt="Imagen 1"></div>
+            <div class="image"><img src="cat3.jpg" alt="Imagen 2"></div>
+        </div>
+        <p>En 1948, Israel ganó la Guerra de la Independencia y pasó a ocupar el 77% del territorio, incluido el oeste de Jerusalén. Bajo dominio egipcio quedó la Franja de Gaza y bajo dominio jordano, Cisjordania (incluido Jerusalén Este).
+        Por un lado, Israel considera que las potencias árabes buscaban destruir el recién creado Estado de Israel. Algunos historiadores críticos consideran que las potencias árabes intervinieron para proteger a la población palestina, que ya antes de la independencia de Israel
+         sufrió desplazamientos mediante planes de conquista militar israelíes como el Plan Dalet. Otros consideran que las potencias árabes vieron en el plan de partición de la ONU una nueva
+          muestra de colonialismo occidental.</p>
+
+          <h3>Los Acuerdos de Oslo y Camp David</h3>
+          <div id="gallery">
+            <div class="image"><img src="cat4.jpg" alt="Imagen 1"></div>
+        </div>
+          <p>Los Acuerdos de Oslo, firmados en 1993, se enmarcan en un proceso de paz que comenzó en Madrid en 1991. En esta época se produjo el reconocimiento del Estado de Palestina por la ONU y la primera intifada palestina contra la ocupación. Los Acuerdos preveían cinco años para alcanzar un acuerdo de paz permanente, pero no se consiguió. En el año 2000 se intentó de nuevo con los Acuerdos de Camp David. Pero tampoco se logró. No hubo acuerdo ni en el retorno de las personas refugiadas, ni en el estatuto de Jerusalén, ni en los ajustes territoriales
+             ni en las cuestiones de seguridad israelíes. </p>
+             <br>
+             En los Acuerdos de Oslo no se reconoció la totalidad de Cisjordania como región autónoma palestina y la fragmentaron en tres zonas:
+            </br>
+            <br>
+        Zona A: bajo control civil y militar de la Autoridad Nacional Palestina.
+    </br>
+    <br>
+        Zona B: bajo control civil palestino pero bajo control militar palestino-israelí.
+    </br>
+    <br>
+        Zona C: bajo control civil y militar israelí. Cuando se escucha hablar de la Cisjordania ocupada, normalmente se hace referencia a esta última zona, aunque también hay áreas de la segunda zona.
+        </br>
+
+        <h3> La política de asentamientos</h3>
+        <div id="gallery">
+            <div class="image"><img src="cat5.jpg" alt="Imagen 1"></div>
+        </div>
+        <p>Los asentamientos llevan extendiéndose desde la Guerra de 1967. Se distinguen dos tipos: los asentamientos oficiales, que cuentan con "autorización oficial" del Gobierno,
+             y los puestos avanzados, que no cuentan con ella
+             <br>
+             Los colonos que viven en los asentamientos oficiales (e ilegales) escogen vivir ahí por motivos más prácticos que ideológicos, basados en la buena calidad de vida que ahí pueden obtener. La inversión y el grado de desarrollo de los asentamientos es tal que han
+              llegado para quedarse, sin que haya indicios de que vayan a desaparecer a medio o largo plazo.
+              Por su parte, los colonos residentes en los puestos avanzados se mueven por motivos ideológicos. Consideran ese terreno legítimamente ganado en 1967, habiéndose instalado en tierras deshabitadas que les pertenecen por derecho y mandato divino e histórico. El terreno es suyo porque lo dice la Torá. Todo lo demás, no importa. Y por ello consideran legítima y necesaria la violencia
+              que ejercen contra las personas palestinas alrededor de los asentamientos.
+            </p>
+            <footer>
+                <div class="footer-content">
+                  <div class="contact-info">
+                    <a id="cont"></a>
+                    <h2>contactos</h2>
+                    <h3>Contacto</h3>
+                    <p>Email: guerrasobreiraelpoleista@.com</p>
+                    <p>Teléfono: 91 310 32 72</p>
+                    <p>Dirección:Secretariado Estatal 
+                        Fernando VI, 8, 1º izda. 
+                        28004 Madrid 
+                        España</p>
+                  </div>
+                  <div class="social-media">
+                    <h3>Síguenos</h3>
+                    <a href="#" target="_blank"><img src="wsp.png" alt="WhatsApp"></a>
+                    <a href="#" target="_blank"><img src="inst.jpg" alt="Instagram"></a>
+                    <a href="#" target="_blank"><img src="face.jpg" alt="Facebook"></a>
+                    <!-- Agrega más iconos según sea necesario -->
+                  </div>
+                </div>
+                <div class="footer-bottom">
+                  <p>&copy; 2023 Tu Sitio Web | Diseñado por <a href="#" target="_blank">Victor Cuela</a></p>
+                </div>
+              </footer>
+
+        <script src="index.js"></script>
+</body>
+</html>
